@@ -22,3 +22,6 @@ const prodConfig = {
 };
 
 module.exports = merge(commonConfig, prodConfig);
+// shared: above means the dependencies will all be separate small
+// .js files that you'll see in the Network tab in Chrome
+// This is better than one big js file.
