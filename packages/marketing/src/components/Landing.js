@@ -13,10 +13,10 @@ import { Link } from 'react-router-dom';
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <MaterialLink component={Link} to="/" color="inherit">
-        Your Website
+    <Typography variant='body2' color='textSecondary' align='center'>
+      {'Coffeyright © '}
+      <MaterialLink component={Link} to='/' color='inherit'>
+        Patrick Coffey
       </MaterialLink>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -71,38 +71,55 @@ export default function Album() {
       <main>
         {/* Hero unit */}
         <div className={classes.heroContent}>
-          <Container maxWidth="sm">
+          <Container maxWidth='sm'>
             <Typography
-              component="h1"
-              variant="h2"
-              align="center"
-              color="textPrimary"
+              component='h1'
+              variant='h2'
+              align='center'
+              color='textPrimary'
               gutterBottom
             >
-              Home Page
+              Patrick's Microfrontend Example Site
             </Typography>
             <Typography
-              variant="h5"
-              align="center"
-              color="textSecondary"
+              variant='h5'
+              align='center'
+              color='textSecondary'
               paragraph
             >
-              Something short and leading about the collection below—its
-              contents, the creator, etc. Make it short and sweet, but not too
-              short so folks don&apos;t simply skip over it entirely.
+              This site contains four independent microfrontends deployed to
+              separate containers on Amazon S3:
+              <ul>
+                <li>
+                  <strong>auth</strong> (signin and signup pages, React)
+                </li>
+                <li>
+                  <strong> header </strong>
+                  (basically the navbar, React)
+                </li>
+                <li>
+                  <strong>marketing</strong> (this page, React)
+                </li>
+                <li>
+                  <strong>dashboard</strong> (Vue)
+                </li>
+              </ul>{' '}
+              At the top right of this site, click the Login button. Leave the
+              email and password fields blank, then click the SIGN IN button to
+              see the dashboard (Vue) microfrontend.
             </Typography>
             <div className={classes.heroButtons}>
-              <Grid container spacing={2} justify="center">
+              <Grid container spacing={2} justify='center'>
                 <Grid item>
-                  <Link to="/pricing">
-                    <Button variant="contained" color="primary">
+                  <Link to='/pricing'>
+                    <Button variant='contained' color='primary'>
                       Pricing
                     </Button>
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link to="/pricing">
-                    <Button variant="outlined" color="primary">
+                  <Link to='/pricing'>
+                    <Button variant='outlined' color='primary'>
                       Pricing
                     </Button>
                   </Link>
@@ -111,7 +128,7 @@ export default function Album() {
             </div>
           </Container>
         </div>
-        <Container className={classes.cardGrid} maxWidth="md">
+        <Container className={classes.cardGrid} maxWidth='md'>
           {/* End hero unit */}
           <Grid container spacing={4}>
             {cards.map((card) => (
@@ -119,11 +136,11 @@ export default function Album() {
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="https://source.unsplash.com/random"
-                    title="Image title"
+                    image='https://source.unsplash.com/random'
+                    title='Image title'
                   />
                   <CardContent className={classes.cardContent}>
-                    <Typography gutterBottom variant="h5" component="h2">
+                    <Typography gutterBottom variant='h5' component='h2'>
                       Heading
                     </Typography>
                     <Typography>
@@ -132,10 +149,10 @@ export default function Album() {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" color="primary">
+                    <Button size='small' color='primary'>
                       View
                     </Button>
-                    <Button size="small" color="primary">
+                    <Button size='small' color='primary'>
                       Edit
                     </Button>
                   </CardActions>
@@ -147,16 +164,16 @@ export default function Album() {
       </main>
       {/* Footer */}
       <footer className={classes.footer}>
-        <Typography variant="h6" align="center" gutterBottom>
-          Footer
+        <Typography variant='h6' align='center' gutterBottom>
+          Thanks for visiting!
         </Typography>
         <Typography
-          variant="subtitle1"
-          align="center"
-          color="textSecondary"
-          component="p"
+          variant='subtitle1'
+          align='center'
+          color='textSecondary'
+          component='p'
         >
-          Something here to give the footer a purpose!
+          You have reached the footer of the page :-)
         </Typography>
         <Copyright />
       </footer>
