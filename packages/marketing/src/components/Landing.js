@@ -15,7 +15,12 @@ function Copyright() {
   return (
     <Typography variant='body2' color='textSecondary' align='center'>
       {'Coffeyright © '}
-      <MaterialLink component={Link} to='/' color='inherit'>
+      <MaterialLink
+        component={Link}
+        to={{ pathname: `https://coffey.buzz` }}
+        target='_blank'
+        color='inherit'
+      >
         Patrick Coffey
       </MaterialLink>{' '}
       {new Date().getFullYear()}
